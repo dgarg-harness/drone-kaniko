@@ -12,4 +12,40 @@ stages:
             run: go test -v ./...
           type: script
     type: ci
+  - name: build1
+    spec:
+      steps:
+        - name: go_build
+          spec:
+            run: go build
+          type: script
+        - name: go_test
+          spec:
+            run: go test -v ./...
+          type: script
+    type: ci
+  - name: build2
+    spec:
+      steps:
+        - name: go_build
+          spec:
+            run: go build
+          type: script
+        - name: go_test
+          spec:
+            run: go test -v ./...
+          type: script
+    type: ci
+  - name: build3
+    spec:
+      steps:
+        - name: go_build
+          spec:
+            run: go build
+          type: script
+        - name: go_test
+          spec:
+            run: go test -v ./...
+          type: script
+    type: ci
 version: 1
