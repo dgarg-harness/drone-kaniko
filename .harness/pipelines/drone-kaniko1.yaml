@@ -3,16 +3,6 @@ stages:
   - name: build
     spec:
       steps:
-        - name: Send a Slack message
-          spec:
-            with:
-              webhook_url: slackurl
-              webhook_url_on_error: slackurl
-              api_token: slacktoken
-              color: red
-              color_on_error: red
-            uses: slack@3.5.0
-          type: bitrise
         - name: go_build
           spec:
             run: go build
